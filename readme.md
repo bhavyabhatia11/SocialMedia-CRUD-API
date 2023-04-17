@@ -106,14 +106,37 @@ This project is divided into 4 main folders.
 
 The API exposes the following endpoints:
 
-1. `POST /users`: Create a new user. The request body should contain a JSON object with the following fields: `name`, `email`, and `password`.
-2. `GET /users/:id`: Get a user by ID.
-3. `PUT /users/:id`: Update a user by ID. The request body should contain a JSON object with the fields you want to update.
-4. `DELETE /users/:id`: Delete a user by ID.
-5. `POST /posts`: Create a new post. The request body should contain a JSON object with the following fields: `title`, `body`, and `user_id`.
-6. `GET /posts/:id`: Get a post by ID.
-7. `PUT /posts/:id`: Update a post by ID. The request body should contain a JSON object with the fields you want to update.
-8. `DELETE /posts/:id`: Delete a post by ID.
+1. `GET` `/` - A simple test endpoint that returns "Hello, World!".
+
+2. `GET` `/users` - Retrieves a list of all users.
+
+3. `GET` `/users/:uid` - Retrieves a specific user with the given UID.
+
+4. `POST` `/users` - Creates a new user.
+
+5. `GET` `/posts` - Retrieves a list of all posts.
+
+6. `GET` `/posts/:uid` - Retrieves a specific post with the given UID.
+
+7. `GET` `/posts/user/:uid` - Retrieves all posts by the given user UID.
+
+8. `POST` `/posts/create-post` - Creates a new post.
+
+9. `PUT` `/posts/:postUID/update-post` - Updates an existing post with the given post UID.
+
+10. `DELETE` `/posts/:postUID/delete-post` - Deletes an existing post with the given post UID.
+
+11. `PUT` `/posts/:postUID/like` - Likes an existing post with the given post UID.
+
+12. `PUT` `/posts/:postUID/dislike` - Dislikes an existing post with the given post UID.
+
+13. `GET` `/posts/:postUID/comments` - Retrieves all comments on a specific post with the given post UID.
+
+14. `POST` `/comments/create-comment` - Creates a new comment.
+
+15. `PUT` `/comments/:commentUID/update-comment` - Updates an existing comment with the given comment UID.
+
+16. `DELETE` `/comments/:commentUID/delete-comment` - Deletes an existing comment with the given comment UID.
 
 ## Contributing
 
